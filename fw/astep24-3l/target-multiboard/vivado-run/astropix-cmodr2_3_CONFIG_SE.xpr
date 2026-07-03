@@ -4,10 +4,10 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="65" Path="/home/daq/AstroPix/260225_dev_richard/astep-fw/fw/astep24-3l/target-multiboard/vivado-run/astropix-cmodr2_3_CONFIG_SE.xpr">
+<Project Product="Vivado" Version="7" Minor="65" Path="/home/npl/AstroPix_9chip_2026TB_CERN/astep-fw/fw/astep24-3l/target-multiboard/vivado-run/astropix-cmodr2_3_CONFIG_SE.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="38e9c3d8694042a897e826bcdd282b66"/>
+    <Option Name="Id" Val="9ab2e941f0354ad98a73a66ba55aada1"/>
     <Option Name="Part" Val="xc7a35tcpg236-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -127,14 +127,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../common/rtl/rfg/protocol/rfg_axis_readout_framing.sv">
+      <File Path="$PPRDIR/../../../common/rtl/rfg/protocol/rfg_axis_protocol.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../common/rtl/rfg/protocol/rfg_axis_protocol.sv">
+      <File Path="$PPRDIR/../../../common/rtl/rfg/protocol/rfg_axis_readout_framing.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -175,7 +175,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../common/rtl/housekeeping/xadc_hk_driver.sv">
+      <File Path="$PPRDIR/../../../common/rtl/housekeeping/ext_adcdac_driver.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -196,21 +196,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../common/rtl/housekeeping/ext_adcdac_driver.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../common/rtl/layers/sync_async_patgen.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../common/rtl/layers/layers_readout_switched.sv">
+      <File Path="$PPRDIR/../../../common/rtl/housekeeping/xadc_hk_driver.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -224,7 +210,21 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../common/rtl/layers/sync_async_patgen.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../../common/rtl/layers/astropix_spi_protocol_av1.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../common/rtl/layers/layers_readout_switched.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -259,14 +259,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../common/rtl/utilities/resets_synchronizer.sv">
+      <File Path="$PPRDIR/../../../common/rtl/utilities/reset_sync.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../common/rtl/utilities/reset_sync.sv">
+      <File Path="$PPRDIR/../../../common/rtl/utilities/resets_synchronizer.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -301,28 +301,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/axis_switch_layer_frame/axis_switch_layer_frame.xci">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/axis_switch_layer_frame/axis_switch_layer_frame.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/ip/axis_switch_swifs/axis_switch_swifs.xci">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/axis_switch_swifs/axis_switch_swifs.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/clk_core_extorint_40/clk_core_extorint_40.xci">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/clk_core_extorint_40/clk_core_extorint_40.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
+          <Attr Name="ImportTime" Val="1782884902"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -331,7 +313,7 @@
       <File Path="$PSRCDIR/sources_1/ip/clk_sys_to_40/clk_sys_to_40.xci">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/clk_sys_to_40/clk_sys_to_40.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
+          <Attr Name="ImportTime" Val="1782884938"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -340,16 +322,7 @@
       <File Path="$PSRCDIR/sources_1/ip/fifo_axis_1clk_1kB/fifo_axis_1clk_1kB.xci">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/fifo_axis_1clk_1kB/fifo_axis_1clk_1kB.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/fifo_axis_1clk_8x64/fifo_axis_1clk_8x64.xci">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/fifo_axis_1clk_8x64/fifo_axis_1clk_8x64.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
+          <Attr Name="ImportTime" Val="1782884938"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -358,16 +331,16 @@
       <File Path="$PSRCDIR/sources_1/ip/fifo_axis_2clk_spi_hk/fifo_axis_2clk_spi_hk.xci">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/fifo_axis_2clk_spi_hk/fifo_axis_2clk_spi_hk.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
+          <Attr Name="ImportTime" Val="1782884902"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/fifo_axis_2clk_spi_layer/fifo_axis_2clk_spi_layer.xci">
+      <File Path="$PSRCDIR/sources_1/ip/fifo_axis_1clk_8x64/fifo_axis_1clk_8x64.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/fifo_axis_2clk_spi_layer/fifo_axis_2clk_spi_layer.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/fifo_axis_1clk_8x64/fifo_axis_1clk_8x64.xci"/>
+          <Attr Name="ImportTime" Val="1782884938"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -376,7 +349,25 @@
       <File Path="$PSRCDIR/sources_1/ip/fifo_axis_2clk_spi_loopback/fifo_axis_2clk_spi_loopback.xci">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/fifo_axis_2clk_spi_loopback/fifo_axis_2clk_spi_loopback.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
+          <Attr Name="ImportTime" Val="1782884902"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/axis_switch_layer_frame/axis_switch_layer_frame.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/axis_switch_layer_frame/axis_switch_layer_frame.xci"/>
+          <Attr Name="ImportTime" Val="1782884902"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/fifo_axis_2clk_spi_layer/fifo_axis_2clk_spi_layer.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/fifo_axis_2clk_spi_layer/fifo_axis_2clk_spi_layer.xci"/>
+          <Attr Name="ImportTime" Val="1782884938"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -385,7 +376,7 @@
       <File Path="$PSRCDIR/sources_1/ip/fifo_axis_2clk_sw_io_16e/fifo_axis_2clk_sw_io_16e.xci">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/fifo_axis_2clk_sw_io_16e/fifo_axis_2clk_sw_io_16e.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
+          <Attr Name="ImportTime" Val="1782884902"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -394,7 +385,16 @@
       <File Path="$PSRCDIR/sources_1/ip/xadc_astep/xadc_astep.xci">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/xadc_astep/xadc_astep.xci"/>
-          <Attr Name="ImportTime" Val="1772039925"/>
+          <Attr Name="ImportTime" Val="1782884902"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/clk_core_extorint_40/clk_core_extorint_40.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../common/xilinx-ip/clk_core_extorint_40/clk_core_extorint_40.xci"/>
+          <Attr Name="ImportTime" Val="1782884938"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -407,7 +407,7 @@
         <Option Name="VerilogDir" Val="$PPRDIR/../../../common/includes"/>
         <Verilog_Define Name="ASTROPIX3"/>
         <Verilog_Define Name="CONFIG_SE"/>
-        <Verilog_Define Name="RFG_FW_BUILD" Val="32&apos;d26022501"/>
+        <Verilog_Define Name="RFG_FW_BUILD" Val="32&apos;d26070101"/>
         <Verilog_Define Name="RFG_FW_ID" Val="32&apos;h0000AC13"/>
         <Verilog_Define Name="SYNTHESIS" Val="1"/>
         <Verilog_Define Name="TARGET_CMOD"/>
@@ -452,7 +452,7 @@
         <Option Name="SrcSet" Val="sources_1"/>
         <Verilog_Define Name="ASTROPIX3"/>
         <Verilog_Define Name="CONFIG_SE"/>
-        <Verilog_Define Name="RFG_FW_BUILD" Val="32&apos;d26022501"/>
+        <Verilog_Define Name="RFG_FW_BUILD" Val="32&apos;d26070101"/>
         <Verilog_Define Name="RFG_FW_ID" Val="32&apos;h0000AC13"/>
         <Verilog_Define Name="SYNTHESIS" Val="1"/>
         <Verilog_Define Name="TARGET_CMOD"/>

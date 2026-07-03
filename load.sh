@@ -6,7 +6,8 @@ fi
 
 ## Python path
 export PYTHONPATH="$BASE/sw/:$PYTHONPATH"
-source /cache/Vivado/2023.2/settings64.sh 
+#source /cache/Vivado/2023.2/settings64.sh 
+source /tools/Xilinx/Vivado/2023.2/settings64.sh
 
 ## Bin Folder
 export PATH="$BASE/bin:$PATH"

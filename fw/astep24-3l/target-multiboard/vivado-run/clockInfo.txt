@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Wed Feb 25 12:08:02 2026
-| Host         : argon
+| Date         : Wed Jul  1 14:52:27 2026
+| Host         : npl-17inch
 | Design       : design_1
 | Device       : xc7a35t-cpg236-1--
 -------------------------------------

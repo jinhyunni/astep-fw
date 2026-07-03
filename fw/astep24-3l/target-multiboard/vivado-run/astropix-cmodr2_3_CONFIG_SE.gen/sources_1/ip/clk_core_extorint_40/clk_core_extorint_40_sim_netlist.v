@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Wed Feb 25 12:03:39 2026
-// Host        : argon running 64-bit Ubuntu 22.04.4 LTS
+// Date        : Wed Jul  1 14:50:49 2026
+// Host        : npl-17inch running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/daq/AstroPix/260225_dev_richard/astep-fw/fw/astep24-3l/target-multiboard/vivado-run/astropix-cmodr2_3_CONFIG_SE.gen/sources_1/ip/clk_core_extorint_40/clk_core_extorint_40_sim_netlist.v
+//               /home/npl/AstroPix_9chip_2026TB_CERN/astep-fw/fw/astep24-3l/target-multiboard/vivado-run/astropix-cmodr2_3_CONFIG_SE.gen/sources_1/ip/clk_core_extorint_40/clk_core_extorint_40_sim_netlist.v
 // Design      : clk_core_extorint_40
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
