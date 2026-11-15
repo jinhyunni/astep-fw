@@ -221,7 +221,7 @@ async def main(args):
     logger.info("FPGA test successful.")
 
     logger.debug("Set External clocks.:setExternalClocks(enable=True, ext_clock_is_differential=False, waitForClockChange=True)")
-    ok = await boardDriver.setExternalClock(enable=True, ext_clock_is_differential=False, waitForClockChange=True) # add
+    ok = await boardDriver.setExternalClock(enable=False, ext_clock_is_differential=False, waitForClockChange=True) # add
     logger.info(f"External clock switch result: {ok}")
     c = await boardDriver.rfg.read_clock_ctrl()
     logger.info(f"clock_ctrl=0x{c:08x}")
@@ -313,13 +313,13 @@ async def main(args):
     if args.inject:
         logger.debug("Enable injection pixel")
         try:
-            boardDriver.asics[args.inject[0]].enable_inj_col(
+            boardDriver.asics[args.inject[0]-1].enable_inj_col(
                 args.inject[1], args.inject[3]
             )
-            boardDriver.asics[args.inject[0]].enable_inj_row(
+            boardDriver.asics[args.inject[0]-1].enable_inj_row(
                 args.inject[1], args.inject[2]
             )
-            boardDriver.asics[args.inject[0]].enable_pixel(
+            boardDriver.asics[args.inject[0]-1].enable_pixel(
                 chip=args.inject[1],
                 col=args.inject[3],
                 row=args.inject[2],
@@ -327,7 +327,7 @@ async def main(args):
             logger.debug("Set injection voltage")
             # Priority to command line, defaults to yaml - already in vdac units
             if args.vinj is not None:
-                boardDriver.asics[args.inject[0]].asic_config[
+                boardDriver.asics[args.inject[0]-1].asic_config[
                     f"config_{args.inject[1]}"
                 ]["vdacs"]["vinj"][1] = int(
                     args.vinj / 1000 * 1024 / 1.8
@@ -447,9 +447,11 @@ async def main(args):
     if args.inject:
         print(len(bufferLength_lst), max(bufferLength_lst))
         dataStream = dataParse_autoread(dataStream_lst, bufferLength_lst, None)
-        df = drivers.astropix.decode.decode_readout(
-            myhack(), logger, dataStream, i=0, printer=False
-        )
+        # df = drivers.astropix.decode.decode_readout(
+        #     myhack(), logger, dataStream, i=0, printer=False
+        # )
+        dec = Decode()
+        df = dec.decode_readout(logger, dataStream, i=0, printer=True)
         if len(df) > 0:
             csvframe = [
                 "readout",
@@ -471,8 +473,7 @@ async def main(args):
         else:
             logger.warning("No data written to disk because none have been received.")
     else:
-#        bin2csv(args.outputPrefix)
-        bin2csv(args.outputPrefix+args.name)
+       bin2csv(args.outputPrefix)
 
 
 #######################################################

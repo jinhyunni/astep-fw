@@ -455,7 +455,8 @@ class AstepRun:
         cycle: float = 0,
         pulseperset: int = 1,
         dac_config: tuple[int, list[float]] = None,
-        onchip: bool = True,
+        #onchip: bool = True,
+        onchip: bool = False,
         is_mV: bool = True,
     ):
         """

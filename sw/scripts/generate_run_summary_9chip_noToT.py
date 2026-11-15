@@ -196,7 +196,7 @@ def main(args):
             range=[[0, 35], [0, 35]],
             weights=df_sel['hits'],
             cmap='viridis',
-            vmax=100
+            #vmax=100
         )
     
         ax_ij.set_title(f'Layer {layer}, Chip {chip}')

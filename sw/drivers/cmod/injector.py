@@ -150,6 +150,7 @@ class Injector:
         await self.stop()
         # Update injector config
         self.__patgen()
+        #self.rfg.addWrite(1<<5, 0b10) #onchip injector
         # Load injector config
         self.__patgenCtrl(PG_CTRL_SUSPEND | PG_CTRL_RESET)
         self.__patgenCtrl(PG_CTRL_NONE)
